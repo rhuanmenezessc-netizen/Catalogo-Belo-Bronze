@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Belo Bronze</title>
+    <style>
+        :root {
+            --bg-color: #0b0b0d;
+            --card-bg: #141418;
+            --gold-primary: #d4af37;
+            --gold-light: #f3e5ab;
+            --silver: #c0c0c0;
+            --text-color: #e0e0e0;
+            --text-muted: #b0b0b8;
+            --border-color: #2a2a30;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .catalog-container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        /* Cabeçalho / Banner */
+        .catalog-header {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 2px solid var(--gold-primary);
+            margin-bottom: 30px;
+            background: linear-gradient(180deg, #16161a 0%, var(--bg-color) 100%);
+            border-radius: 12px;
+        }
+
+        .catalog-header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 4px;
+            color: var(--gold-primary);
+            text-transform: uppercase;
+            margin: 0 0 5px 0;
+        }
+
+        .catalog-header h2 {
+            font-size: 1rem;
+            letter-spacing: 3px;
+            color: var(--silver);
+            text-transform: uppercase;
+            font-weight: 300;
+            margin: 0;
+        }
+
+        .slogan {
+            font-size: 0.9rem;
+            font-style: italic;
+            color: #a67c1e;
+            margin-top: 10px;
+        }
+
+        /* Cartões dos Serviços */
+        .service-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--gold-primary);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--gold-primary);
+        }
+
+        .service-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .service-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--gold-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .service-badge {
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: var(--gold-primary);
+            background-color: #1f1f26;
+            padding: 5px 12px;
+            border-radius: 6px;
+            border: 1px solid #3a3a45;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .service-desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .service-highlights {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .service-highlights li {
+            font-size: 0.88rem;
+            color: var(--silver);
+            margin-bottom: 6px;
+            padding-left: 18px;
+            position: relative;
+        }
+
+        .service-highlights li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--gold-primary);
+        }
+
+        /* Rodapé de Contato */
+        .catalog-footer {
+            margin-top: 40px;
+            padding: 25px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--gold-primary);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .footer-title {
+            font-size: 1.1rem;
+            color: var(--gold-primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            font-size: 0.95rem;
+            color: var(--silver);
+            line-height: 1.8;
+        }
+
+        .contact-info span {
+            color: #ffffff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="catalog-container">
+
+        <!-- Cabeçalho -->
+        <div class="catalog-header">
+            <h1>Belo Bronze</h1>
+            <h2>Bronzeamento e Estética</h2>
+            <div class="slogan">O Teu Brilho Perfeito</div>
+        </div>
+
+        <!-- Lista de Serviços -->
+        <div class="services-list">
+
+            <!-- 1. Bronzeamento a Jato -->
+            <div class="service-card">
+                <div class="service-header">
+                    <span class="service-title">1. Bronzeamento a Jato (Spray Tan)</span>
+                    <span class="service-badge">Mediante Avaliação</span>
+                </div>
+                <div class="service-desc">
+                    Aplicação rápida e uniforme de uma névoa autobronzeadora com ativos hidratantes e nutritivos. Ideal para quem deseja resultados imediatos e naturais.
+                </div>
+                <ul class="service-highlights">
+                    <li>Bronzeado dourado e natural sem exposição UV</li>
+                    <li>Secagem rápida e sem manchas nas roupas ou pele</li>
+                    <li>Duração aproximada de 7 a 12 dias</li>
+                </ul>
+            </div>
+
+            <!-- 2. Câmaras de Bronzeamento -->
+            <div class="service-card">
+                <div class="service-header">
+                    <span class="service-title">2. Câmaras de Bronzeamento</span>
+                    <span class="service-badge">Mediante Avaliação</span>
+                </div>
+                <div class="service-desc">
+                    Sessões em cabines com tecnologia de luzes ultravioleta controladas, projetadas para estimular a melanina de forma gradual, homogênea e segura.
+                </div>
+                <ul class="service-highlights">
+                    <li>Cor intensa, duradoura e uniforme por todo o corpo</li>
+                    <li>Sessão aquecida e altamente relaxante</li>
+                    <li>Estimula a síntese natural de Vitamina D</li>
+                </ul>
+            </div>
+
+            <!-- 3. Drenagem Linfática -->
+            <div class="service-card">
+                <div class="service-header">
+                    <span class="service-title">3. Drenagem Linfática</span>
+                    <span class="service-badge">Mediante Avaliação</span>
+                </div>
+                <div class="service-desc">
+                    Massagem suave e ritmada que estimula o sistema linfático a eliminar o excesso de resíduos e líquidos acumulados no organismo.
+                </div>
+                <ul class="service-highlights">
+                    <li>Reduz inchaço, celulite e retenção hídrica</li>
+                    <li>Ativa e melhora a circulação sanguínea</li>
+                    <li>Excelente indicação para pós-operatórios e relaxamento</li>
+                </ul>
+            </div>
+
+            <!-- 4. Limpeza de Pele -->
+            <div class="service-card">
+                <div class="service-header">
+                    <span class="service-title">4. Limpeza de Pele Profunda</span>
+                    <span class="service-badge">Mediante Avaliação</span>
+                </div>
+                <div class="service-desc">
+                    Tratamento facial completo para remoção de impurezas, cravos e células mortas, renovando o viço e a textura da pele.
+                </div>
+                <ul class="service-highlights">
+                    <li>Higienização, extração, alta frequência e máscara calmante</li>
+                    <li>Desobstrui poros e controla a oleosidade facial</li>
+                    <li>Potencializa a absorção de cosméticos e o bronze facial</li>
+                </ul>
+            </div>
+
+            <!-- 5. Lipoaspiração de Papada -->
+            <div class="service-card">
+                <div class="service-header">
+                    <span class="service-title">5. Lipoaspiração de Papada</span>
+                    <span class="service-badge">Mediante Avaliação</span>
+                </div>
+                <div class="service-desc">
+                    Procedimento focado na eliminação da gordura localizada na região submentoniana (papada), redefinindo o contorno da mandíbula.
+                </div>
+                <ul class="service-highlights">
+                    <li>Redução visível do efeito de "queixo duplo"</li>
+                    <li>Melhora o perfil facial e contorno do rosto</li>
+                    <li>Tratamento seguro e com resultados progressivos</li>
+                </ul>
+            </div>
+
+            <!-- 6. Depilação a Laser -->
+            <div class="service-card">
+                <div class="service-header">
+                    <span class="service-title">6. Depilação a Laser</span>
+                    <span class="service-badge">Mediante Avaliação</span>
+                </div>
+                <div class="service-desc">
+                    Remoção definitiva dos pelos por feixes de luz direcionados à raiz do folículo, deixando a pele suave e livre de incômodos.
+                </div>
+                <ul class="service-highlights">
+                    <li>Elimina pelos encravados e foliculite</li>
+                    <li>Tecnologia com ponteira resfriada para máximo conforto</li>
+                    <li>Áreas: Axilas, Virilha, Pernas, Buço, Barba e mais</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Rodapé -->
+        <div class="catalog-footer">
+            <div class="footer-title">Agendamentos & Consultas</div>
+            <div class="contact-info">
+                📱 WhatsApp: <span>(XX) XXXXX-XXXX</span> | 
+                📸 Instagram: <span>@belobronze.estetica</span><br>
+                📍 Endereço: <span>Seu Endereço Completo Aqui</span>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
